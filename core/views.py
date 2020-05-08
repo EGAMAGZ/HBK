@@ -6,3 +6,6 @@ def cake(request):
 
 def main(request):
     return render(request,"core/home.html")
+
+def congratulations(request):
+    return render(request,"core/message.html")

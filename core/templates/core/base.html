@@ -15,7 +15,7 @@
 <body>
     {% include 'core/sidebar.html' %}
     <div class="contentcontainer" id="contentcontainer">
-        <nav class="navbar navbar-dark bg-nav-color">
+        <nav class="navbar{% if request.path == '/congratulations/' %} navbar-dark bg-nav-color {% else %} navbar-light {% endif %} ">
             <button class="navbar-toggler d-block" type="button" id="navToggle">
                 <span class="navbar-toggler-icon"></span>
             </button>

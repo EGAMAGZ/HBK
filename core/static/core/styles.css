@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+.custom-font{
+    font-family: 'Cedarville Cursive', cursive;
+    font-style: none;
+    font-size: 1.5em;
+    color:#fff;
+}
+
+
 .bg-nav-color{
-    background-color: #6C1660;
+    background: #DE1B85;
 }
 
 .sidenav {
@@ -9,7 +19,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #2e2e2e;
+    background-color: #6C1660;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -18,7 +28,8 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #FAF3E3;
+    /* color: #818181; */
     display: block;
     transition: 0.3s;
 }
@@ -41,4 +52,11 @@
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+}
+.curved {
+    position: relative;
+    background: #DE1B85;
+    height: 50vh;
+    border-bottom-left-radius: 50% 18%;
+    border-bottom-right-radius: 50% 18%;
 }

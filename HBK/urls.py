@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from core.views import cake,main
+from core.views import cake,main,congratulations
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -25,4 +25,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',main),
     path('cake/',cake, name="cake"),
+    path('congratulations/',congratulations,name="congratulations"),
 ]+ static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
