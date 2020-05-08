@@ -1,0 +1,101 @@
+{% extends 'core/fake-base.html' %}
+{% load static %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-dark qtz-background-primary  my-2 my-sm-0 my-md-0 my-lg-2 mx-sm-0 mx-md-0 mx-lg-5 fixed-top rounded">
+    <a class="navbar-brand" href="#" class="text-white">
+        <i class="qtz-text-highlight-accent qtz-text-no-font p-1 text-dark qtz-main-font">Quetzi</i><i
+            class="text-white qtz-text-no-font qtz-main-font">Lab Dashboard</i>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item {% if request.path == '/' %}active{% endif %}">
+                <a class="nav-link qtz-nav-link" href="{% url 'cake' %}">Inicio</a>
+            </li>
+            <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}">
+                <a class="nav-link qtz-nav-link" href="{% url 'cake' %}">Contacto</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Mas informacion
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Precio</a>
+                    <a class="dropdown-item" href="#">FAQ</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Blog</a>
+                </div>
+            </li>
+
+        </ul>
+        <div class="btn-group d-flex flex-row flex-md-row flex-sm-column" role="group" aria-label="Basic example">
+            
+            <a href="{% url 'cake' %}" class="btn qtz-btn-accent mw-100">Login</a>
+            <a href="{% url 'cake' %}" class="btn qtz-btn-accent mw-100">Register</a>
+        </div>
+    </div>
+</nav>
+
+{% block homepage-content %}{% endblock %}
+
+<footer class=" font-small pt-4 qtz-background-primary">
+    <div class="container-fluid text-center text-md-left">
+
+        <div class="row">
+            <div class="col-md-6 mt-md-0 mt-3">
+                <h5 class="text-uppercase text-white">QuetziLabs Dashboard</h5>
+                <p class="text-white">Administración y control de tu trabajo en QuetziLabs.</p>
+            </div>
+            <hr class="clearfix w-100 d-md-none pb-3">
+            <div class="col-md-3 mb-md-0 mb-3">
+                <h5 class="text-uppercase text-white">Links</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" class="text-white">Acerca de</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'cake' %}" class="text-white">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white">Preguntas Frecuentes</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white">Link 4</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mb-md-0 mb-3">
+                <h5 class="text-uppercase text-white">Links</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" class="text-white">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white">Link 3</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white">Link 4</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Grid row -->
+
+    </div>
+
+    <div class="footer-copyright text-center py-3 text-white qtz-text-no-font">© 2018 Copyright:
+        <a href="#" class="text-white">QuetziLab.com</a>
+    </div>
+
+</footer>
+{% endblock %}

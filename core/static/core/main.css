@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+
+:root {
+  /* COLORS */
+  --primary-color: #323846;
+  --accent-color: #c3f7eb;
+  --accent-color-dark:#88D9F3;
+  --background-color:#FBF9F3;
+  --background-color-dark:#e8e6e1;
+  /* FONTS */
+  --main-font: "Quicksand", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.qtz-min-width-50{
+  min-width: 50%;
+}
+
+/* Background */
+
+.qtz-background-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.qtz-background-accent {
+  background-color: var(--accent-color) !important;
+}
+
+.qtz-background-accent-dark{
+  background-color: var(--accent-color-dark) !important;
+}
+
+.qtz-background{
+  background-color: var(--background-color) !important;
+}
+
+.qtz-logo {
+  width: 21rem;
+  height: 21rem;
+}
+
+/* Text */
+
+.qtz-text-no-font {
+  font-style: normal !important;
+}
+
+.qtz-text-no-decoration{
+  text-decoration: none !important;
+}
+
+.qtz-text-color-primary {
+  color: var(--primary-color) !important;
+}
+
+.qtz-text-color-accent{
+  color: var(--accent-color) !important;
+}
+
+.qtz-text-color-accent-dark{
+  color: var(--accent-color-dark) !important;
+}
+
+.qtz-text-color-background{
+  color:var(--background-color);
+}
+
+.qtz-main-font {
+  font-family: var(--main-font) !important;
+}
+
+.qtz-text-highlight-accent {
+  background-color: var(--accent-color) !important;
+}
+
+/* ----- HTML Elements ----- */
+
+/* Button */
+.qtz-btn-accent{
+  background-color: var(--accent-color) !important;
+}
+.qtz-btn-accent:hover{
+  background-color: var(--accent-color-dark) !important;
+}
+
+/* ----- Custom HTML Elements ----- */
+.qtz-card{
+  border-radius:0 !important;
+  border: 0 !important;
+}
+
+.qtz-nav-link::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: var(--accent-color-dark);
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: .25s linear;
+}
+
+.qtz-nav-link:hover::before, .qtz-nav-link:focus:before{
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.errorlist{
+  list-style-type:none;
+}
+
+.qtz-vertical-nav{
+  
+}

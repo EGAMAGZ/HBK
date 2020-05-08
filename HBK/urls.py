@@ -16,12 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from core.views import main
+from core.views import cake,main
 
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',main, name="cake"),
+    path('',main),
+    path('cake/',cake, name="cake"),
 ]+ static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
