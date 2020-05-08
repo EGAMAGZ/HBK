@@ -61,7 +61,10 @@
     border-bottom-right-radius: 50% 18%;
 }
 
-body { margin:20px; background:hsl(70, 31%, 85%); text-align:center; }
+.cake-container {
+    background:hsl(70, 31%, 85%); 
+    text-align:center;
+}
 
 .balloon {
     display:inline-block;
