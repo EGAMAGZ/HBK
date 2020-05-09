@@ -257,19 +257,19 @@
 
 .porcupine {
     position:absolute;
-     cursor: pointer;
-     display: flex;
-     align-items: flex-end;
-     justify-content: center;
-     flex-direction: row;
-     width: 200px;
-     height:200px;
-     background-color: #795548;
-     border-radius: 50%;
-     overflow: hidden;
-     transition: all 1s;
-   }
-   .head {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: row;
+    width: 200px;
+    height:200px;
+    background-color: #795548;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 1s;
+}
+.head {
     position: relative;
     width: 200px;
     height: 70px;
@@ -278,8 +278,8 @@
     object-fit: cover;
     margin: 0 auto;
     transition: all 200ms;
-   }
-   .spike:hover .head {
+}
+.spike:hover .head {
     transition:all 100ms;
     position: relative;
     width: 200px;
@@ -288,15 +288,15 @@
     background-color: #FFCCBC;
     object-fit: cover;
     margin: 0 auto;
-   }
-   
-   .spike:hover .leftEye:after,
-   .spike:hover .rightEye:after{
+}
+
+.spike:hover .leftEye:after,
+.spike:hover .rightEye:after{
     transition: 200ms all;
     content:'';
     transform: rotatex(85deg);
-   }
-   .leftEye {
+}
+.leftEye {
     position:absolute;
     top: -50px;
     left: 18%;
@@ -304,8 +304,8 @@
     height: 70px;
     border-radius: 50%;
     background-color: #FFCCBC;
-   }
-   .leftEye:before {
+}
+.leftEye:before {
     display: block;
     position: absolute;
     bottom: 0;
@@ -313,8 +313,8 @@
     width: 60px;
     height: 30px;
     background-color: #FFCCBC;
-   }
-   .leftEye:after {
+}
+.leftEye:after {
     display: block;
     position: absolute;
     top: 20px;
@@ -324,17 +324,17 @@
     width: 20px;
     height: 20px;
     background-color: #000;
-   }
-   .rightEye {
-   position:absolute;
+}
+.rightEye {
+    position:absolute;
     top: -50px;
     right: 18%;
     width: 60px;
     height: 70px;
     border-radius: 50%;
     background-color: #FFCCBC;
-   }
-   .rightEye:before {
+}
+.rightEye:before {
     display: block;
     position: absolute;
     bottom: 0;
@@ -342,8 +342,8 @@
     width: 60px;
     height: 30px;
     background-color: #FFCCBC;
-   }
-   .rightEye:after {
+}
+.rightEye:after {
     display: block;
     position: absolute;
     top: 20px;
@@ -353,15 +353,15 @@
     width: 20px;
     height: 20px;
     background-color: #000;
-   }
-   .spike {
-     cursor: pointer;
-     width: 200px;
-     height:200px;
-     background-color: #795548;
-     border-radius: 50%;
-   }
-   .spike:before {
+}
+.spike {
+    cursor: pointer;
+    width: 200px;
+    height:200px;
+    background-color: #795548;
+    border-radius: 50%;
+}
+.spike:before {
     content: '';
     background-color: #795548;
     position:absolute;
@@ -371,32 +371,32 @@
     height: 250px;
     clip-path: polygon(0% 50%, 100% 50%, 92% 40%, 98% 34%, 90% 30%, 98% 19%, 86% 20%, 95% 12%, 81% 14%, 83% 5%, 72% 8%, 68% 3%, 62% 6%, 57% 1%, 52% 5%, 46% 0%, 42% 6%, 35% 1%, 30% 8%, 20% 5%, 22% 13%, 10% 10%, 15% 20%, 3% 21%, 11% 30%, 3% 35%, 10% 40%);
     transition: all 500ms;
-   }
-   .spike:hover:before {
+}
+.spike:hover:before {
     transform: scale(1.3); 
     content: '';
-     transition: all 50ms;
-   }
-   .spike.porcupine {
+    transition: all 50ms;
+}
+.spike.porcupine {
     height:100px;
-   }
-   .nose {
-   position:absolute;
+}
+.nose {
+position:absolute;
     top: -5px;
     left: 45%;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: #000;
-   }
-   .nose:after {
+}
+.nose:after {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: #fff;
-   }
-   .leftEar {
-   position:absolute;
+}
+.leftEar {
+    position:absolute;
     top: -70px;
     left: 20%;
     width: 20px;
@@ -406,8 +406,8 @@
     clip-path: inset(0 0 50% 0);
     transform: rotate(-45deg);
     animation: lEarMove 4s ease-out infinite;
-   }
-   .rightEar {
+}
+.rightEar {
     position:absolute;
     top: -70px;
     right: 20%;
@@ -418,14 +418,40 @@
     clip-path: inset(0 0 50% 0);
     transform: rotate(45deg);
     animation: rEarMove 4s ease-out infinite;
-   }
-   
-   .text{text-align:center}
-   @keyframes rEarMove {
+}
+
+.text{text-align:center;display: none;}
+@keyframes rEarMove {
     50% {transform: rotate(60deg)}
-   }
-   
-   @keyframes lEarMove {
+}
+
+@keyframes lEarMove {
     50% {transform: rotate(-60deg)}
-   }
-   
+}
+
+.cloud {
+    padding: 10px 20px;
+    position: relative;
+    background-color: #fff;
+    border: 2px solid #666;
+    border-radius: 4px;
+    display: none;
+    transition: ease-in-out 1s 0.5s;
+    transform: translateX(50px);
+}
+.bg:hover .cloud,.bg:hover .text{
+    display: block;
+}
+
+.cloud:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: -10px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    border-left: 2px solid #666;
+    border-top: 2px solid #666;
+    background-color: #fff;
+}
