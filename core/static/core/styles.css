@@ -33,6 +33,16 @@
     display: block;
     transition: 0.3s;
 }
+.sidenav .link {
+    width:85%;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FAF3E3;
+    /* color: #818181; */
+    display: block;
+    transition: 0.3s;
+}
 
 #contentcontainer{
     transition: margin-left .5s;
@@ -42,8 +52,10 @@
     border: 0;
 }
 
-.sidenav a:hover {
-    color: #f1f1f1;
+.sidenav .link:hover {
+    color: #6C1660;
+    background-color: #FAF3E3;
+    border-radius: 0 1em 1em 0;
 }
 
 .sidenav .closebtn {
@@ -53,6 +65,7 @@
     font-size: 36px;
     margin-left: 50px;
 }
+
 .curved {
     position: relative;
     background: #DE1B85;
@@ -121,3 +134,25 @@
 .balloon:nth-child(5){ background:hsl(23,55%,57%); animation-duration:5s; }
 .balloon:nth-child(5):before { color:hsl(23,44%,46%);  }
 
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    animation: arrow 4s ease-in-out infinite;
+} 
+.arrow::after{
+    content:'Click';
+    transform: rotate(-135deg) translateX(2.5em) translateY(-8px);
+    position:absolute;
+    font-family: 'Cedarville Cursive', cursive;
+}
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+@keyframes arrow{
+    0%,100%{transform: translateX(0) rotate(135deg);}
+    50%{transform: translateX(25px) rotate(135deg);}
+}
